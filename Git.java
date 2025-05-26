@@ -5,7 +5,6 @@
 
 
 import java.util.*;
-
 class SolveNQueens{
 
     public static boolean isSafe(char [][]board, int row, int col){
