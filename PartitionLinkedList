@@ -1,0 +1,35 @@
+import java.util.*;
+
+class LLetcode{
+
+    public ListNode partition(ListNode head, int x){
+
+        if(head == null || head.next == null){
+            return head;
+        }
+
+        ListNode beforehead = new ListNode(0); // beforehead  dummy
+        ListNode afterhead = new ListNode(0); // afterhead dummy 
+
+        ListNode before = beforehead;
+        ListNode after = afterhead;
+
+        while(head != null){
+
+            if(head.val < x){
+
+                before.next = head; //   before.next is joint to the head
+                before = before.next; // update
+            }else{
+
+                after.next = head; // 
+          after = after.next; // update to the 
+            }
+            head = head.next;
+        }
+
+        after.next = null;
+        before.next = afterhead.next; // joint the before next to the  afterhead.next to make circle LL
+        return beforehead.next;
+    }
+}

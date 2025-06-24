@@ -1,0 +1,41 @@
+import java.util.*;
+class Leetcode{
+
+    public ListNode rotateRight(ListNode head, int k){
+
+        if(head == null || head.next == null){
+            return null;
+        }
+
+        // step 1
+
+        ListNode curr = head; // first elemnt ne curr store karavata
+        int length = 1;  // ane length Starting 1 to 5
+
+        while(curr.next != null){
+            curr = curr.next;
+            length++;
+        }
+
+        // step 2
+
+        curr.next = head; // last element is joint to the first element and make circular LL
+
+        // step 3
+
+         k = k % length; // k values is More the Node values
+        int Nhead = length-k;// total length - k equal to the Nhead
+        ListNode newtail = curr;
+    
+
+        while(Nhead-- > 0){
+              newtail = newtail.next;
+        }
+
+
+        // step 4
+        ListNode newhead = newtail.next;
+        newtail.next = null;
+        return newhead;
+    }
+}
