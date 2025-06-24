@@ -8,7 +8,11 @@ class swapNodes{
         }
 
         // 1, 2, 3, 4, 5, Question
-        // 1, 4, 3, 2, 5 ans this swap the Node 2<->4 and the  1) first the kNode and 2) endth KthNode 
+        // 1, 4, 3, 2, 5 ans this swap the Node 2<->4 and the  
+        
+        //1) find first the kNode  
+        //2)  find end KthNode
+        // 3) swapNode
 
 
         ListNode curr = head;
