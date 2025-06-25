@@ -2,7 +2,7 @@ import java.util.HashMap;
 
   class Hash1{
 
-    public static void main(String args[]){ //  hashMap ma add karva ma put ave and set ma add ave 
+    public static void main(String args[]){  
 
       HashMap< String,Integer> map = new HashMap<>();
       //HashMap<Integer, String> map = new HashMap<>();
@@ -47,10 +47,10 @@ import java.util.HashMap;
 
       // iteration
 
-      ///for(Map.Entry<String, Integer> e: map.entrySet()){
-        //System.out.print(e.getKey());
-        //System.out.print(e.getValue());
-      //}
+      for(Map.Entry<String, Integer> e: map.entrySet()){
+        System.out.print(e.getKey());
+        System.out.print(e.getValue());
+      }
 
 
     
