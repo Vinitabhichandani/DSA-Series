@@ -17,7 +17,7 @@ class removeNthFromeEnd{
             size++;
         }
 
-        if(size == n){  // means  travel the 1 to n  rech and delete to  head so     return null 
+        if(size == n){  // means  travel the 1 to n  rech and delete to  head so     return head.next 
             return head.next;  
         }
 
