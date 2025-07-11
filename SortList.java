@@ -1,4 +1,4 @@
- */
+ 
 public class Solution {
     public ListNode sortList(ListNode head) {
         
@@ -60,9 +60,7 @@ public class Solution {
         }
    
         
- 
-        
-        
+      
         if(a != null){ // if the merge a and b and merging  a first Not null 
         
              curr.next = a;     // connect curr.next is a  
