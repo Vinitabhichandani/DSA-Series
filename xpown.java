@@ -2,7 +2,7 @@ import java.util.*;
 
 public class xpown{
 
-    public static int calcupow(int x , int n ){ // new functions powwr hovathi return type int avse yad rakhava 
+    public static int calcupow(int x , int n ){ 
 
         if(n==0){ // base case
             return 1;
@@ -11,16 +11,19 @@ public class xpown{
             return 0;
         }
 
-        int xpown = calcupow(x,n-1) * x;
-        int xpownm1 = calcupow(x,n-1);
-        return xpown;
-    }
+        if(n % 2 == 0){ // means ke even  why use optimize TC (log n)
+
+            xpown(x, n/2) * xpown(x, n/2);
+            
+           }else{
+            xpown(x, n/2) * xpown(x, n/2) * x;
+        }   
 
     public static void main(String[]args){
 
         int x = 3;
         int n = 3;
-        int ans = calcupow(x,n);
-        System.out.println(ans);
+        int V = calcupow(x,n);
+        System.out.println(V);
     }
 }
